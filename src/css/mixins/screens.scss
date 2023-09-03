@@ -1,0 +1,9 @@
+$lg: 1340px;
+$md: 1020px;
+$sm: 740px;
+
+@mixin screen($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}

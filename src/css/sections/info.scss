@@ -1,0 +1,170 @@
+.infoBlock {
+  padding-bottom: 50px;
+
+  @include screen($md) {
+    padding-bottom: 40px;
+  }
+
+  @include screen($sm) {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    margin-top: 18px;
+    text-align: center;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include screen($sm) {
+      margin-top: 15px;
+    }
+  }
+
+  &__row1, &__row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @include screen($sm) {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      row-gap: 20px;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    margin-top: 50px;
+    position: relative;
+    min-height: 600px;
+
+    @include screen($lg) {
+      min-height: 400px;
+    }
+
+    @include screen($md) {
+      min-height: 500px;
+    }
+
+    @include screen($sm) {
+      margin-top: 20px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      left: 167px;
+      top: -37px;
+      position: absolute;
+      background: url('/assets/images/car2.png') no-repeat;
+      width: 818px;
+      height: 670px;
+      background-size: contain;
+      z-index: -1;
+
+      @include screen($lg) {
+        width: 490px;
+        height: 400px;
+        left: 182px;
+        top: 34px;
+      }
+
+      @include screen($md) {
+        left: 71px;
+        top: 129px;
+      }
+
+      @include screen($sm) {
+        position: static;
+        left: auto;
+        top: auto;
+        z-index: auto;
+        width: 100%;
+        height: auto;
+        padding-top: 81.9%;
+      }
+    }
+  }
+
+  &__row1 {
+    padding-left: 229px;
+    padding-right: 239px;
+
+    @include screen($lg) {
+      padding-left: 200px;
+      padding-right: 210px;
+    }
+
+    @include screen($md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__row2 {
+    margin-top: 37px;
+    padding-left: 88px;
+    padding-right: 19px;
+
+    @include screen($md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include screen($sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+
+    @include screen($md) {
+      flex-basis: 280px;
+    }
+
+    @include screen($sm) {
+      flex-basis: auto;
+    }
+
+    &--perc {
+      padding: 7px 40px;
+      line-height: 1.15;
+    }
+  }
+}
+
+.couponsBlock {
+  padding-bottom: 100px;
+
+  @include screen($md) {
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    text-align: center;
+    max-width: 730px;
+    margin-top: 18px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include screen($sm) {
+      margin-top: 15px;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &__btn-mix {
+    display: inline-block;
+  }
+}

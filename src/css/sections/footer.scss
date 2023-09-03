@@ -1,0 +1,81 @@
+.footerBlock {
+  padding-top: 30px;
+  padding-bottom: 48px;
+  background: var(--primary2);
+
+  @include screen($sm) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    font-size: 14px;
+
+    @include screen($sm) {
+      font-size: 10px;
+    }
+  }
+
+  &__li + &__li {
+    margin-top: 20px;
+  }
+
+  &__soc {
+    display: flex;
+    gap: 16px;
+    margin-top: 15px;
+  }
+
+  &__address {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 40px;
+  }
+
+  %soc-item {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__soc-item {
+    width: 32px;
+    height: 32px;
+
+    &--vk {
+      &::before {
+        @extend %soc-item;
+        background: url('/assets/images/icons/soc/vk.svg');
+      }
+    }
+
+    &--ok {
+      &::before {
+        @extend %soc-item;
+        background: url('/assets/images/icons/soc/ok.svg');
+      }
+    }
+
+    &--rut {
+      &::before {
+        @extend %soc-item;
+        background: url('/assets/images/icons/soc/rut.svg');
+      }
+    }
+
+    &--tg {
+      &::before {
+        @extend %soc-item;
+        background: url('/assets/images/icons/soc/tg.svg');
+      }
+    }
+
+    &--you {
+      &::before {
+        @extend %soc-item;
+        background: url('/assets/images/icons/soc/you.svg');
+      }
+    }
+  }
+}

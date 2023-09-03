@@ -1,0 +1,287 @@
+.headerBlock {
+  overflow: hidden;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  min-height: 100vh;
+  position: relative;
+  background: url('/assets/images/main-bg.jpg') no-repeat;
+  background-size: cover;
+
+  @include screen($md) {
+    min-height: auto;
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  @include screen($sm) {
+    padding-top: 15px;
+  }
+
+  &__flag {
+    display: none;
+    position: absolute;
+    top: 134px;
+    left: 0;
+
+    @include screen(1440px) {
+      display: block;
+    }
+
+    @include screen($md) {
+      top: 90px;
+    }
+
+    @include screen($sm) {
+      top: 70px;
+    }
+  }
+
+  &__flag-xl {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+
+    @include screen(1440px) {
+      display: none;
+    }
+
+    @include screen($md) {
+      top: 90px;
+    }
+
+    @include screen($sm) {
+      top: 70px;
+    }
+  }
+
+  &__img-mob {
+    display: none;
+    margin-top: 15px;
+
+    @include screen($md) {
+      display: block;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    padding-top: 138px;
+    color: var(--blue);
+    font-size: 82px;
+    font-weight: 700;
+    line-height: normal;
+
+    @include screen($md) {
+      padding-top: 100px;
+      font-size: 62px;
+    }
+
+    @include screen($sm) {
+      padding-top: 80px;
+      font-size: 52px;
+    }
+  }
+
+  &__title-text2 {
+    line-height: 0.7;
+    text-align: right;
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 135%;
+    max-width: 397px;
+
+    @include screen($sm) {
+      margin-top: 15px;
+      font-size: 16px;
+      max-width: 270px;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    display: inline-block;
+
+    @include screen($md) {
+      margin-top: 15px;
+      display: block;
+    }
+  }
+
+  &__decor {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 844px;
+      height: 597px;
+      max-height: 78vh;
+      min-height: 450px;
+      background: url('/assets/images/car.png') no-repeat;
+      background-size: contain;
+      right: -30px;
+      top: 162px;
+
+      @include screen($lg) {
+        width: 562px;
+        height: 400px;
+        max-height: none;
+        min-height: auto;
+        top: 190px;
+      }
+
+      @include screen($md) {
+        display: none;
+      }
+    }
+  }
+}
+
+.navBlock {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__burger {
+    display: none;
+    @include screen($md) {
+      display: block;
+    }
+  }
+
+  &__burger-btn {
+    display: block;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url('/assets/images/icons/burger.svg');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 50px;
+
+    @include screen($lg) {
+      column-gap: 30px;
+    }
+  }
+
+  &__logo {
+    width: 164px;
+
+    @include screen($sm) {
+      width: 124px;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+
+    @include screen($lg) {
+      column-gap: 30px;
+    }
+
+    @include screen($md) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__lk {
+    padding: 20px 30px;
+
+    @include screen($md) {
+      display: none;
+    }
+  }
+}
+
+
+.modalNavBlock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--primary2);
+  z-index: 9000;
+  display: none;
+  padding: 15px 30px;
+
+  &--showed {
+    @include screen($md) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    padding-top: 30px;
+  }
+
+  &__link {
+    display: block;
+    color: var(--block);
+    font-weight: 600;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url('/assets/images/icons/close.svg');
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

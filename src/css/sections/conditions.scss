@@ -1,0 +1,117 @@
+.condBlock {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include screen($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__items {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-left: -2px;
+    margin-right: -2px;
+    position: relative;
+
+    @include screen($md) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    @include screen($sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &__vol-mob {
+    display: none;
+
+    @include screen($md) {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+    }
+  }
+
+  &__item {
+    padding-bottom: 40px;
+    width: calc(33.3% - 4px);
+    margin: 0 2px;
+    color: var(--white);
+    padding-top: 15px;
+    position: relative;
+
+    @include screen($md) {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      margin: 0px;
+    }
+
+    img {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+
+      @include screen($md) {
+        display: none;
+      }
+    }
+
+    &--vol1, &--vol3 {
+      min-height: 263px;
+      @include screen($lg) {
+        min-height: 310px;
+      }
+
+      @include screen($md) {
+        min-height: auto;
+      }
+    }
+
+    &--vol1 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    &--vol2 {
+      padding-left: 28px;
+      padding-right: 28px;
+      min-height: 289px;
+
+      @include screen($lg) {
+        min-height: 340px;
+      }
+
+      @include screen($md) {
+        min-height: auto;
+      }
+    }
+
+    &--vol3 {
+      padding-left: 41px;
+      padding-right: 41px;
+
+      @include screen($md) {
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.6;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}

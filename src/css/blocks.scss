@@ -1,0 +1,80 @@
+.buttonBlock {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--black);
+  line-height: normal;
+  background: #FFFBF4;
+  box-shadow: 0px 2px 8px 0px rgba(198, 78, 28, 0.25);
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  font-family: 'Montserrat';
+  text-align: center;
+  cursor: pointer;
+}
+
+.buttonBlock2 {
+  display: block;
+  padding: 20px 40px;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--white);
+  line-height: 1.25;
+  background: var(--primary);
+  box-shadow: 0px 2px 12px 0px rgba(185, 71, 24, 0.40);
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  text-align: center;
+  cursor: pointer;
+
+  @include screen($sm) {
+    font-size: 16px;
+  }
+}
+
+.flagBlock {
+  width: 328px;
+  height: 68px;
+  background: url('/assets/images/decor/flag.svg') no-repeat;
+  background-size: 340px;
+  background-position-y: -10px;
+  padding-top: 5px;
+
+  @include screen($sm) {
+    width: 194px;
+    height: 45px;
+    background-size: 222px;
+    background-position-y: -6px;
+    background-position-x: -20px;
+    padding-top: 3px;
+  }
+
+  &__wrap {
+    padding-left: 100px;
+
+    @include screen($sm) {
+      padding-left: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: normal;
+    color: var(--white);
+    text-transform: uppercase;
+
+    @include screen($sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__dt {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+
+    @include screen($sm) {
+      font-size: 16px;
+    }
+  }
+}

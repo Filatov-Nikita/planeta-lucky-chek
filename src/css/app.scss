@@ -1,0 +1,51 @@
+@import './reset.scss';
+@import './mixins/screens.scss';
+@import './fonts.scss';
+
+:root {
+  --primary: #EA591D;
+  --primary2: #FCEDD5;
+  --primary3: #FFF8ED;
+  --white: #ffffff;
+  --black: #151515;
+  --blue: #004D9D;
+}
+
+body {
+  background: var(--primary3);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--black);
+}
+
+.wrapper {
+  max-width: 1300px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+
+  @include screen($lg) {
+    max-width: 1000px;
+  }
+
+  @include screen($md) {
+    max-width: 700px;
+  }
+
+  @include screen($sm) {
+    max-width: 540px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@import 'utilities.scss';
+@import 'comps.scss';
+@import 'blocks.scss';
+@import 'sections/footer.scss';
+@import 'sections/header.scss';
+@import 'sections/conditions.scss';
+@import 'sections/gifts.scss';
+@import 'sections/info.scss';

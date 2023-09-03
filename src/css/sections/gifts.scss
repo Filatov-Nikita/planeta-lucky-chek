@@ -1,0 +1,128 @@
+.giftsBlock {
+  padding-top: 100px;
+
+  @include screen($md) {
+    padding-top: 70px;
+  }
+
+  &__items {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include screen($lg) {
+      justify-content: center;
+      row-gap: 80px;
+    }
+
+    @include screen($sm) {
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      row-gap: 60px;
+      margin-top: 15px;
+    }
+  }
+
+  &__item--4 &__img {
+    max-width: 163px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &--1 {
+      flex-basis: 412px;
+      margin-right: 16px;
+
+      @include screen($md) {
+        flex-basis: 350px;
+      }
+    }
+
+    &--2 {
+      flex-basis: 155px;
+      margin-right: 100px;
+
+      @include screen($md) {
+        margin-right: 0px;
+      }
+    }
+
+    &--3 {
+      flex-basis: 223px;
+      margin-right: 110px;
+
+      @include screen($lg) {
+        margin-right: 70px;
+        margin-left: 30px;
+      }
+
+      @include screen($md) {
+        margin-right: 65px;
+        margin-left: 90px;
+      }
+
+      @include screen($sm) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &--4 {
+      flex-basis: 224px;
+    }
+  }
+
+  &__img {
+    min-height: 260px;
+
+    @include screen($sm) {
+      min-height: auto;
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__col {
+    text-align: center;
+  }
+
+  &__card-block {
+    max-width: 210px;
+    margin: 0 auto;
+  }
+
+  &__card-price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+  &__card-price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  &__card-prices {
+    padding: 0 7px;
+  }
+
+  &__card-col, &__col {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+}

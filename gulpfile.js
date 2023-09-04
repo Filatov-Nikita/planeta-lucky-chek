@@ -27,7 +27,7 @@ function createImages(prod = false) {
     if(prod) {
       flow = flow.pipe(imagemin([
         imagemin.mozjpeg({ quality: 80, progressive: true }),
-        imageminPngquant({ quality: [0.7, 0.8], speed: 7 })
+        imageminPngquant({ quality: [0.5, 0.8], speed: 1 })
       ]));
     }
 

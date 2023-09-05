@@ -1,6 +1,22 @@
 section#conditions.condBlock
   .wrapper
-    h2.h2.center Условия участия
-    include ../../blocks/cond.pug
+    h2.h2.center Порядок получения призов
+    .condBlock__items
+      img.condBlock__vol-mob(src='/assets/images/decor/vol-mob.svg')
+      .condBlock__item.condBlock__item--vol1
+        img(src='/assets/images/decor/vol1.svg')
+        .condBlock__title 1
+        .condBlock__text
+          | Вручение призов победителям акции «СчастливЧЕК» будет осуществляться с 11 по 17 декабря 2023 года по рабочим дням 10:00-17:00 в Администрации ТРЦ «Планета».
+      .condBlock__item.condBlock__item--vol2
+        img(src='/assets/images/decor/vol2.svg')
+        .condBlock__title 2
+        .condBlock__text
+          | При себе необходимо иметь паспорт гражданина РФ с постоянной пропиской, e-mail или смс с уникальным номером купона, оригинал выигравшего чека.
+      .condBlock__item.condBlock__item--vol3
+        img(src='/assets/images/decor/vol1.svg')
+        .condBlock__title 3
+        .condBlock__text
+          | Подробная информация об организаторе акции, о правилах ее проведения, количестве призов, сроках и порядке их получения в правилах акции.
     .condBlock__btn
       a.buttonBlock2.condBlock__link(href='https://id.mall.tech/2/auth') Узнать номера своих купонов

@@ -142,6 +142,10 @@
 
   &__items {
     margin-top: 0 !important;
-    justify-content: space-around !important;
+    justify-content: space-evenly !important;
+  }
+
+  &__item--3 {
+    margin-right: 70px;
   }
 }

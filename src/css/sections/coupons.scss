@@ -57,7 +57,7 @@
   &__car-coupon {
     border-radius: 10px;
     display: inline-block;
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     font-size: 30px;
     font-weight: 700;
     padding: 15px 40px;
@@ -115,7 +115,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    column-gap: 55px;
+    column-gap: 30px;
     row-gap: 8px;
   }
 
@@ -145,5 +145,9 @@
     gap: 16px;
     flex-basis: 250px;
     flex-grow: 1;
+  }
+
+  &__gift-price {
+    flex-basis: 120px;
   }
 }

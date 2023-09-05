@@ -126,3 +126,22 @@
     line-height: 1.35;
   }
 }
+
+.giftsFinalMixin {
+  &__title {
+    margin-bottom: 15px;
+
+    @include screen($md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__col + &__col {
+    margin-top: 5px;
+  }
+
+  &__items {
+    margin-top: 0 !important;
+    justify-content: space-around !important;
+  }
+}

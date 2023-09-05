@@ -1,0 +1,149 @@
+.couponsFinalBlock {
+  padding-top: 100px;
+
+  @include screen($md) {
+    padding-top: 70px;
+  }
+
+  &__grid {
+    margin-top: 20px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 30px;
+
+    @include screen($md) {
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__car {
+    flex-basis: 550px;
+    flex-grow: 1;
+
+    @include screen($md) {
+      flex-grow: 0;
+      order: 1;
+    }
+  }
+
+  &__car-number {
+    margin-top: 120px;
+    flex-basis: 350px;
+    flex-grow: 1;
+
+    @include screen($md) {
+      margin-top: 10px;
+      flex-basis: auto;
+      flex-grow: 0;
+      text-align: center;
+    }
+  }
+
+  &__car-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+
+    @include screen($md) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__car-coupon {
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid var(--primary);
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px 40px;
+    line-height: 1.35;
+
+    @include screen($md) {
+      font-size: 26px;
+    }
+  }
+
+  &__gifts {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 35px;
+
+    @include screen($md) {
+      justify-content: center;
+      row-gap: 20px;
+      text-align: center;
+    }
+  }
+
+  &__gift-img {
+    flex-basis: 412px;
+  }
+
+  &__gift-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 20px;
+
+    @include screen($md) {
+      display: none;
+    }
+  }
+
+  &__gift-title-mob {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    text-align: center;
+    display: none;
+
+    @include screen($md) {
+      display: block;
+    }
+  }
+
+  &__gift-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 55px;
+    row-gap: 8px;
+  }
+
+  &__gift-row +  &__gift-row {
+    margin-top: 20px;
+  }
+
+  &__gift-price {
+    font-size: 24px;
+    font-weight: 600;
+    font-size: 1.35;
+  }
+
+  &__gift-item {
+    font-size: 20px;
+    line-height: 1.35
+  }
+
+  &__gift-coupons {
+    flex-grow: 1;
+    flex-basis: 400px;
+  }
+
+  &__gift-list2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-basis: 250px;
+    flex-grow: 1;
+  }
+}
